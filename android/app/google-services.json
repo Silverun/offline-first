@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "592851523176",
+    "firebase_url": "https://offline-first-e5e98-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "offline-first-e5e98",
+    "storage_bucket": "offline-first-e5e98.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592851523176:android:0cc0579d9b83d9e8e64ddd",
+        "android_client_info": {
+          "package_name": "com.silverun.offlinefirst"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzGg20KUtLqQjSa2oyGokm_0ZGOisnxAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
