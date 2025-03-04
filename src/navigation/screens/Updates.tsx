@@ -1,59 +1,38 @@
 import { Button, Text } from "@react-navigation/elements";
-import { FlatList, Platform, Pressable, StyleSheet, View } from "react-native";
-import { state } from "../../store";
+import { FlatList, Pressable, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { randomCategory } from "../../utils/randomCat";
-import { observer } from "@legendapp/state/react";
-// import * as Network from "expo-network";
-import { useEffect, useState } from "react";
-import NetInfo from "@react-native-community/netinfo";
+import { useNetInfo } from "@react-native-community/netinfo";
+import { useExpenseStore } from "../../store/zustand";
 
-export const Updates = observer(() => {
-  const expenses = state.expenses.get();
-  const [online, setOnline] = useState<boolean | null>();
+export const Updates = () => {
+  const { isConnected } = useNetInfo();
+  const { expenses, addExpense, removeExpense } = useExpenseStore();
 
-  useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener(
-      ({ isConnected, isInternetReachable, type }) => {
-        console.log(
-          `Platform: ${Platform.OS} | Network type: ${type}, Connected: ${isConnected}, Internet Reachable: ${isInternetReachable}`
-        );
-        setOnline((prev) => (isConnected !== prev ? isConnected : prev));
-      }
-    );
-
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
-  const addExpense = () => {
+  const addExpenseHandler = () => {
     const newExpense = {
       id: Math.random().toString(),
       title: randomCategory(),
       amount: Math.floor(Math.random() * 101),
       date: new Date().toLocaleString(),
     };
-
-    state.expenses.set((currentExpenses) => [...currentExpenses, newExpense]);
+    addExpense(newExpense, isConnected);
   };
 
-  const deleteExpense = (id: string) => {
-    state.expenses.set((currentExpenses) =>
-      currentExpenses.filter((expense) => expense.id !== id)
-    );
+  const deleteExpenseHandler = (id: string) => {
+    removeExpense(id);
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.online}>Online: {online ? "yes" : "no"}</Text>
+      <Text style={styles.online}>Online: {isConnected ? "yes" : "no"}</Text>
       <FlatList
         contentContainerStyle={styles.contentContainer}
         data={expenses}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
-            onPress={() => deleteExpense(item.id)}
+            onPress={() => deleteExpenseHandler(item.id)}
             style={styles.renderItem}
           >
             <Text style={styles.itemName}>
@@ -63,10 +42,10 @@ export const Updates = observer(() => {
           </Pressable>
         )}
       />
-      <Button onPress={addExpense}>Add Expense</Button>
+      <Button onPress={addExpenseHandler}>Add Expense</Button>
     </SafeAreaView>
   );
-});
+};
 
 const styles = StyleSheet.create({
   container: {

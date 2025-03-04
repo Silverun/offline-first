@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133AE5DF23349B106319EB72 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C90C0461ADDA0B638B3387D3 /* PrivacyInfo.xcprivacy */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		38487FAEC88227DB6CFCE316 /* Pods_offlinefirst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FA91A6EC24ED77C341934C /* Pods_offlinefirst.framework */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		454006668C03432591D8956D /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8DAB77217B454DACA3D08E /* noop-file.swift */; };
-		634943C42ACE40F2BC83143F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B64C572EF7EC4EBF99D6E332 /* GoogleService-Info.plist */; };
+		75390489AB3840CBA4FB3311 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9411B456AE74AEF8F7C4D79 /* noop-file.swift */; };
+		A90FA017D68EE5E450729132 /* Pods_offlinefirst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F86A3DEA0107FDC0189340C /* Pods_offlinefirst.framework */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		BE2CC0BACE355B41CABED75B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 462FD4CCDAD3D3F6EA242E79 /* PrivacyInfo.xcprivacy */; };
+		BCB5FA10557F4BC1A17C8798 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 413F5CE5BFA04470B28A76D0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,15 +26,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = offlinefirst/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = offlinefirst/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = offlinefirst/main.m; sourceTree = "<group>"; };
-		1F8DAB77217B454DACA3D08E /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "offlinefirst/noop-file.swift"; sourceTree = "<group>"; };
-		30F179A33BEB489891F5D717 /* offlinefirst-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "offlinefirst-Bridging-Header.h"; path = "offlinefirst/offlinefirst-Bridging-Header.h"; sourceTree = "<group>"; };
-		32FA91A6EC24ED77C341934C /* Pods_offlinefirst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_offlinefirst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		462FD4CCDAD3D3F6EA242E79 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = offlinefirst/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3F86A3DEA0107FDC0189340C /* Pods_offlinefirst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_offlinefirst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		413F5CE5BFA04470B28A76D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "offlinefirst/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-offlinefirst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offlinefirst.debug.xcconfig"; path = "Target Support Files/Pods-offlinefirst/Pods-offlinefirst.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-offlinefirst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-offlinefirst.release.xcconfig"; path = "Target Support Files/Pods-offlinefirst/Pods-offlinefirst.release.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = offlinefirst/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B64C572EF7EC4EBF99D6E332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "offlinefirst/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		C90C0461ADDA0B638B3387D3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = offlinefirst/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C9411B456AE74AEF8F7C4D79 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "offlinefirst/noop-file.swift"; sourceTree = "<group>"; };
+		D2A0B58BED054473B3A09DB2 /* offlinefirst-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "offlinefirst-Bridging-Header.h"; path = "offlinefirst/offlinefirst-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-offlinefirst/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38487FAEC88227DB6CFCE316 /* Pods_offlinefirst.framework in Frameworks */,
+				A90FA017D68EE5E450729132 /* Pods_offlinefirst.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,10 +61,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				1F8DAB77217B454DACA3D08E /* noop-file.swift */,
-				30F179A33BEB489891F5D717 /* offlinefirst-Bridging-Header.h */,
-				462FD4CCDAD3D3F6EA242E79 /* PrivacyInfo.xcprivacy */,
-				B64C572EF7EC4EBF99D6E332 /* GoogleService-Info.plist */,
+				413F5CE5BFA04470B28A76D0 /* GoogleService-Info.plist */,
+				C9411B456AE74AEF8F7C4D79 /* noop-file.swift */,
+				D2A0B58BED054473B3A09DB2 /* offlinefirst-Bridging-Header.h */,
+				C90C0461ADDA0B638B3387D3 /* PrivacyInfo.xcprivacy */,
 			);
 			name = offlinefirst;
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				32FA91A6EC24ED77C341934C /* Pods_offlinefirst.framework */,
+				3F86A3DEA0107FDC0189340C /* Pods_offlinefirst.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,14 +150,14 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "offlinefirst" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				F6A2116EFDF7C3EBC2149940 /* [Expo] Configure project */,
+				B8EB7EC72F6E2AD8AB5C86FB /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				F3FA980F5A7F0B376E4E891D /* [CP] Embed Pods Frameworks */,
-				32121D13D4EC4582B981AF15 /* [CP-User] [RNFB] Core Configuration */,
+				F9163B51B5F5BE97FBC848CC /* [CP] Embed Pods Frameworks */,
+				4CBDACD93403EEAEC8343201 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -207,8 +207,8 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				BE2CC0BACE355B41CABED75B /* PrivacyInfo.xcprivacy in Resources */,
-				634943C42ACE40F2BC83143F /* GoogleService-Info.plist in Resources */,
+				BCB5FA10557F4BC1A17C8798 /* GoogleService-Info.plist in Resources */,
+				133AE5DF23349B106319EB72 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +252,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		32121D13D4EC4582B981AF15 /* [CP-User] [RNFB] Core Configuration */ = {
+		4CBDACD93403EEAEC8343201 /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,9 +276,18 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoSystemUI/ExpoSystemUI_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage/RNCAsyncStorage_resources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/boost/boost_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/EXDevLauncher.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-menu/EXDevMenu.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/glog/glog_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb_Privacy.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -286,168 +295,25 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoSystemUI_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseCore_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseCoreInternal_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleUtilities_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNCAsyncStorage_resources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/boost_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevLauncher.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevMenu.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/glog_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/leveldb_Privacy.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-offlinefirst/Pods-offlinefirst-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3FA980F5A7F0B376E4E891D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-offlinefirst/Pods-offlinefirst-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseSharedSwift/FirebaseSharedSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/RCT-Folly/folly.framework",
-				"${BUILT_PRODUCTS_DIR}/RCTDeprecation/RCTDeprecation.framework",
-				"${BUILT_PRODUCTS_DIR}/RCTTypeSafety/RCTTypeSafety.framework",
-				"${BUILT_PRODUCTS_DIR}/RNCAsyncStorage/RNCAsyncStorage.framework",
-				"${BUILT_PRODUCTS_DIR}/RNFBApp/RNFBApp.framework",
-				"${BUILT_PRODUCTS_DIR}/RNFBDatabase/RNFBDatabase.framework",
-				"${BUILT_PRODUCTS_DIR}/RNGestureHandler/RNGestureHandler.framework",
-				"${BUILT_PRODUCTS_DIR}/RNScreens/RNScreens.framework",
-				"${BUILT_PRODUCTS_DIR}/React-Core/React.framework",
-				"${BUILT_PRODUCTS_DIR}/React-CoreModules/CoreModules.framework",
-				"${BUILT_PRODUCTS_DIR}/React-Fabric/React_Fabric.framework",
-				"${BUILT_PRODUCTS_DIR}/React-FabricComponents/React_FabricComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/React-FabricImage/React_FabricImage.framework",
-				"${BUILT_PRODUCTS_DIR}/React-ImageManager/React_ImageManager.framework",
-				"${BUILT_PRODUCTS_DIR}/React-Mapbuffer/React_Mapbuffer.framework",
-				"${BUILT_PRODUCTS_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTAnimation/RCTAnimation.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTAppDelegate/React_RCTAppDelegate.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTBlob/RCTBlob.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTFabric/RCTFabric.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTImage/RCTImage.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTLinking/RCTLinking.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTNetwork/RCTNetwork.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTSettings/RCTSettings.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTText/RCTText.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RCTVibration/RCTVibration.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RuntimeApple/React_RuntimeApple.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RuntimeCore/React_RuntimeCore.framework",
-				"${BUILT_PRODUCTS_DIR}/React-RuntimeHermes/React_RuntimeHermes.framework",
-				"${BUILT_PRODUCTS_DIR}/React-cxxreact/cxxreact.framework",
-				"${BUILT_PRODUCTS_DIR}/React-debug/React_debug.framework",
-				"${BUILT_PRODUCTS_DIR}/React-defaultsnativemodule/React_defaultsnativemodule.framework",
-				"${BUILT_PRODUCTS_DIR}/React-domnativemodule/React_domnativemodule.framework",
-				"${BUILT_PRODUCTS_DIR}/React-featureflags/React_featureflags.framework",
-				"${BUILT_PRODUCTS_DIR}/React-featureflagsnativemodule/React_featureflagsnativemodule.framework",
-				"${BUILT_PRODUCTS_DIR}/React-graphics/React_graphics.framework",
-				"${BUILT_PRODUCTS_DIR}/React-hermes/reacthermes.framework",
-				"${BUILT_PRODUCTS_DIR}/React-idlecallbacksnativemodule/idlecallbacksnativemodule.framework",
-				"${BUILT_PRODUCTS_DIR}/React-jserrorhandler/React_jserrorhandler.framework",
-				"${BUILT_PRODUCTS_DIR}/React-jsi/jsi.framework",
-				"${BUILT_PRODUCTS_DIR}/React-jsiexecutor/jsireact.framework",
-				"${BUILT_PRODUCTS_DIR}/React-jsinspector/jsinspector_modern.framework",
-				"${BUILT_PRODUCTS_DIR}/React-logger/logger.framework",
-				"${BUILT_PRODUCTS_DIR}/React-microtasksnativemodule/React_microtasksnativemodule.framework",
-				"${BUILT_PRODUCTS_DIR}/React-nativeconfig/React_nativeconfig.framework",
-				"${BUILT_PRODUCTS_DIR}/React-perflogger/reactperflogger.framework",
-				"${BUILT_PRODUCTS_DIR}/React-performancetimeline/React_performancetimeline.framework",
-				"${BUILT_PRODUCTS_DIR}/React-rendererconsistency/React_rendererconsistency.framework",
-				"${BUILT_PRODUCTS_DIR}/React-rendererdebug/React_rendererdebug.framework",
-				"${BUILT_PRODUCTS_DIR}/React-runtimescheduler/React_runtimescheduler.framework",
-				"${BUILT_PRODUCTS_DIR}/React-utils/React_utils.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactCodegen/ReactCodegen.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactCommon/ReactCommon.framework",
-				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/fmt/fmt.framework",
-				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/react-native-netinfo/react_native_netinfo.framework",
-				"${BUILT_PRODUCTS_DIR}/react-native-safe-area-context/react_native_safe_area_context.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAppCheckInterop.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseSharedSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTDeprecation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTTypeSafety.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCAsyncStorage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNFBApp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNFBDatabase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNGestureHandler.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNScreens.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreModules.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_Fabric.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_FabricComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_FabricImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_ImageManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_Mapbuffer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_NativeModulesApple.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTAnimation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_RCTAppDelegate.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTBlob.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTFabric.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTLinking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTNetwork.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTSettings.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTText.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTVibration.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_RuntimeApple.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_RuntimeCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_RuntimeHermes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cxxreact.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_debug.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_defaultsnativemodule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_domnativemodule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_featureflags.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_featureflagsnativemodule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_graphics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/reacthermes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/idlecallbacksnativemodule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_jserrorhandler.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsi.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsireact.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsinspector_modern.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/logger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_microtasksnativemodule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_nativeconfig.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/reactperflogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_performancetimeline.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_rendererconsistency.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_rendererdebug.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_runtimescheduler.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_utils.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactCodegen.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactCommon.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fmt.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_netinfo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_safe_area_context.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-offlinefirst/Pods-offlinefirst-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A2116EFDF7C3EBC2149940 /* [Expo] Configure project */ = {
+		B8EB7EC72F6E2AD8AB5C86FB /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -466,6 +332,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-offlinefirst/expo-configure-project.sh\"\n";
 		};
+		F9163B51B5F5BE97FBC848CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-offlinefirst/Pods-offlinefirst-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-offlinefirst/Pods-offlinefirst-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -476,7 +360,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				454006668C03432591D8956D /* noop-file.swift in Sources */,
+				75390489AB3840CBA4FB3311 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +391,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverun.offline-first";
-				PRODUCT_NAME = "offlinefirst";
+				PRODUCT_NAME = offlinefirst;
 				SWIFT_OBJC_BRIDGING_HEADER = "offlinefirst/offlinefirst-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -535,7 +419,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverun.offline-first";
-				PRODUCT_NAME = "offlinefirst";
+				PRODUCT_NAME = offlinefirst;
 				SWIFT_OBJC_BRIDGING_HEADER = "offlinefirst/offlinefirst-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
