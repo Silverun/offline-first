@@ -1,10 +1,13 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { zustandMMKVStorage } from "../db/local/localdb";
-import { expensesRef } from "../db/realtime";
+import {
+  QueueActions,
+  queueStorage,
+  STORAGE_KEYS,
+  zustandMMKVStorage,
+} from "../db/local/localdb";
+import { expensesRef, FirebaseRealtime } from "../db/realtime";
 import { Expense } from ".";
-import { get, push, ref, remove } from "firebase/database";
-import { useNetInfo } from "@react-native-community/netinfo";
 
 interface ExpensesStore {
   expenses: Expense[];
@@ -18,48 +21,29 @@ export const useExpenseStore = create<ExpensesStore>()(
     (set, get) => {
       return {
         expenses: [],
-
         addExpense: async (expense, isConnected) => {
           set((state) => ({
             expenses: [...state.expenses, expense],
           }));
-
           if (isConnected) {
-            try {
-              const newExpenseRef = expensesRef.push();
-              await newExpenseRef.set(expense);
-              console.log("Expense added to Firebase:", expense);
-            } catch (error) {
-              console.error("Failed to add expense to Firebase:", error);
-            }
+            await FirebaseRealtime.addExpense(expense);
           } else {
-            console.log("Offline: Expense not sent to Firebase");
+            //OFFLINE
+            queueStorage.addActionToQueue(QueueActions.ADD, expense);
           }
         },
-
         removeExpense: async (id: string, isConnected) => {
           set((state) => ({
             expenses: state.expenses.filter((expense) => expense.id !== id),
           }));
-
           if (isConnected) {
-            try {
-              const snapshot = await expensesRef.
-              const data = snapshot.val();
-
-              const keyToRemove = Object.keys(data).find(
-                (key) => data[key].id === id
-              );
-
-              if (keyToRemove) {
-                await remove(ref(expensesRef, keyToRemove));
-                console.log("Expense removed from Firebase:", id);
-              }
-            } catch (error) {
-              console.error("Failed to remove expense from Firebase:", error);
-            }
+            await FirebaseRealtime.removeExpense(id);
           } else {
-            console.log("Offline: Expense not removed from Firebase");
+            // OFFLINE
+            const expense = get().expenses.find((expense) => expense.id === id);
+            if (expense) {
+              queueStorage.addActionToQueue(QueueActions.REMOVE, expense);
+            }
           }
         },
 
@@ -67,7 +51,7 @@ export const useExpenseStore = create<ExpensesStore>()(
       };
     },
     {
-      name: "expenses-storage",
+      name: STORAGE_KEYS.expensesStorage,
       storage: createJSONStorage(() => zustandMMKVStorage),
     }
   )

@@ -1,9 +1,10 @@
 import { Button, Text } from "@react-navigation/elements";
-import { FlatList, Pressable, StyleSheet } from "react-native";
+import { FlatList, Pressable, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { randomCategory } from "../../utils/randomCat";
 import { useNetInfo } from "@react-native-community/netinfo";
 import { useExpenseStore } from "../../store/zustand";
+import { QueueActions, queueStorage } from "../../db/local/localdb";
 
 export const Updates = () => {
   const { isConnected } = useNetInfo();
@@ -11,7 +12,7 @@ export const Updates = () => {
 
   const addExpenseHandler = () => {
     const newExpense = {
-      id: Math.random().toString(),
+      id: Math.random().toString().replace(".", ""),
       title: randomCategory(),
       amount: Math.floor(Math.random() * 101),
       date: new Date().toLocaleString(),
@@ -20,7 +21,7 @@ export const Updates = () => {
   };
 
   const deleteExpenseHandler = (id: string) => {
-    removeExpense(id);
+    removeExpense(id, isConnected);
   };
 
   return (
