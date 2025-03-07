@@ -1,5 +1,6 @@
 import { MMKV } from "react-native-mmkv";
 import { Expense } from "../../store";
+import { FirebaseRealtime } from "../realtime";
 
 export const STORAGE_KEYS = {
   expensesStorage: "expenses-storage",
@@ -58,15 +59,36 @@ export const queueStorage = {
   },
   clearQueue: () => {
     expensesQueue.delete(STORAGE_KEYS.expensesQueue);
+    console.log("Queue cleared");
   },
-  processQueue: (set: any) => {
+  processQueue: async () => {
+    console.log("Processing queue...");
     const currentQueue = queueStorage.getQueue();
-    currentQueue.forEach((action) => {
+    if (currentQueue.length === 0) return;
+
+    const promises = currentQueue.map((action) => {
       switch (action.type) {
         case QueueActions.ADD: {
+          return FirebaseRealtime.addExpense(action.payload);
+        }
+        case QueueActions.REMOVE: {
+          return FirebaseRealtime.removeExpense(action.payload.id);
+        }
+        default: {
+          console.warn("Unknown action type:", action?.type);
+          return Promise.resolve();
         }
       }
     });
-    queueStorage.clearQueue();
+    // Add partial completions case for retry
+    try {
+      const results = await Promise.allSettled(promises);
+      console.log("Queue processing results:", results);
+      return results;
+    } catch (error) {
+      console.error("Failed to process queue:", error);
+    } finally {
+      queueStorage.clearQueue();
+    }
   },
 };

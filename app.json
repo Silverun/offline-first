@@ -42,7 +42,7 @@
             "useFrameworks": "static"
           },
           "android": {
-            "kotlinVersion": "1.9.25"
+            "kotlinVersion": "1.9.24"
           }
         }
       ]
