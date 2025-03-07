@@ -8,6 +8,7 @@ import {
 } from "../db/local/localdb";
 import { expensesRef, FirebaseRealtime } from "../db/realtime";
 import { Expense } from ".";
+import { Alert } from "react-native";
 
 interface ExpensesStore {
   expenses: Expense[];
@@ -33,6 +34,9 @@ export const useExpenseStore = create<ExpensesStore>()(
           }
         },
         removeExpense: async (id: string, isConnected) => {
+          const expenseToRemove = get().expenses.find(
+            (expense) => expense.id === id
+          );
           set((state) => ({
             expenses: state.expenses.filter((expense) => expense.id !== id),
           }));
@@ -40,9 +44,14 @@ export const useExpenseStore = create<ExpensesStore>()(
             await FirebaseRealtime.removeExpense(id);
           } else {
             // OFFLINE
-            const expense = get().expenses.find((expense) => expense.id === id);
-            if (expense) {
-              queueStorage.addActionToQueue(QueueActions.REMOVE, expense);
+            console.log("Expense to remove:", expenseToRemove);
+            if (expenseToRemove) {
+              queueStorage.addActionToQueue(
+                QueueActions.REMOVE,
+                expenseToRemove
+              );
+            } else {
+              Alert.alert("Expense to remove was not found");
             }
           }
         },

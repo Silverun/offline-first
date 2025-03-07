@@ -64,7 +64,10 @@ export const queueStorage = {
   processQueue: async () => {
     console.log("Processing queue...");
     const currentQueue = queueStorage.getQueue();
-    if (currentQueue.length === 0) return;
+    if (currentQueue.length === 0) {
+      console.log("Queue is empty");
+      return;
+    }
 
     const promises = currentQueue.map((action) => {
       switch (action.type) {
