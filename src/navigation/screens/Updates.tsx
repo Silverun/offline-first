@@ -1,10 +1,24 @@
-import { Button, Text } from "@react-navigation/elements";
-import { FlatList, Pressable, StyleSheet, View } from "react-native";
+import { Button, Text } from "react-native";
+import {
+  FlatList,
+  LayoutAnimation,
+  Platform,
+  Pressable,
+  StyleSheet,
+  UIManager,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { randomCategory } from "../../utils/randomCat";
 import { useNetInfo } from "@react-native-community/netinfo";
 import { useExpenseStore } from "../../store/zustand";
-import { QueueActions, queueStorage } from "../../db/local/localdb";
+
+if (
+  Platform.OS === "android" &&
+  UIManager.setLayoutAnimationEnabledExperimental
+) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 export const Updates = () => {
   const { isConnected } = useNetInfo();
@@ -17,6 +31,7 @@ export const Updates = () => {
       amount: Math.floor(Math.random() * 101),
       date: new Date().toLocaleString(),
     };
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     addExpense(newExpense, isConnected);
   };
 
@@ -43,7 +58,7 @@ export const Updates = () => {
           </Pressable>
         )}
       />
-      <Button onPress={addExpenseHandler}>Add Expense</Button>
+      <Button title="Add Expense" onPress={addExpenseHandler} />
     </SafeAreaView>
   );
 };

@@ -1,8 +1,7 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { expensesRef } from "../db/realtime";
 import { useExpenseStore } from "../store/zustand";
 import { Expense } from "../store";
-import {} from "firebase/database";
 import { useNetInfo } from "@react-native-community/netinfo";
 import { queueStorage } from "../db/local/localdb";
 

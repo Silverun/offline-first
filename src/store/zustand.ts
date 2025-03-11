@@ -10,7 +10,7 @@ import { expensesRef, FirebaseRealtime } from "../db/realtime";
 import { Expense } from ".";
 import { Alert } from "react-native";
 
-interface ExpensesStore {
+export interface ExpensesStore {
   expenses: Expense[];
   addExpense: (expense: Expense, isConnected: boolean | null) => void;
   removeExpense: (id: string, isConnected: boolean | null) => void;
