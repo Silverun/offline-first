@@ -3,10 +3,10 @@ name: Run Tests
 on:
   push:
     branches:
-      - main # Run on push to the `main` branch, or change to your preferred branch
+      - custom # Run on push to the `main` branch, or change to your preferred branch
   pull_request:
     branches:
-      - main # Run on PR to the `main` branch
+      - custom # Run on PR to the `main` branch
 
 jobs:
   test:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install  # Or `yarn install` if you're using Yarn
+          npm install
 
       - name: Run Jest tests
         run: |
