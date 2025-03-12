@@ -1,0 +1,32 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main # Run on push to the `main` branch, or change to your preferred branch
+  pull_request:
+    branches:
+      - main # Run on PR to the `main` branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Use the latest Ubuntu environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Checkout the repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16" # You can use the Node version of your choice
+
+      - name: Install dependencies
+        run: |
+          npm install  # Or `yarn install` if you're using Yarn
+
+      - name: Run Jest tests
+        run: |
+          npm run test -- --ci --coverage --maxWorkers=2  # Adjust based on your test script
+        env:
+          CI: true # Ensures Jest runs in CI mode (optimizes for CI)
