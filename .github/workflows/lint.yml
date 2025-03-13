@@ -1,18 +1,19 @@
-name: Lint Codebase
+name: Lint and Test Codebase
 
 on:
   push:
     branches:
-      - custom # Adjust to your preferred branch
+      - custom
   pull_request:
     branches:
       - custom
 
 jobs:
-  lint:
-    name: Run ESLint
+  setup:
+    name: Setup Environment
     runs-on: ubuntu-latest
-
+    outputs:
+      cache-key: ${{ steps.cache-node.outputs.cache-hit }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -23,30 +24,51 @@ jobs:
           node-version: "22"
           cache: "npm"
 
+      - name: Cache Dependencies
+        id: cache-node
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install Dependencies
+        if: steps.cache-node.outputs.cache-hit != 'true'
         run: npm ci
+
+  lint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+    needs: setup # Ensures setup runs first
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Restore Cached Dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - name: Run ESLint
         run: npm run lint --max-warnings=0
 
   test:
-    runs-on: ubuntu-latest # Use the latest Ubuntu environment
-
+    name: Run Jest Tests
+    runs-on: ubuntu-latest
+    needs: setup
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2 # Checkout the repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Restore Cached Dependencies
+        uses: actions/cache@v3
         with:
-          node-version: "22" # You can use the Node version of your choice
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - name: Install dependencies
-        run: |
-          npm install
-
-      - name: Run Jest tests
-        run: |
-          npm run test -- --ci --coverage --maxWorkers=2  # Adjust based on your test script
+      - name: Run Jest Tests
+        run: npm run test -- --ci --coverage --maxWorkers=2
         env:
-          CI: true # Ensures Jest runs in CI mode (optimizes for CI)
+          CI: true
