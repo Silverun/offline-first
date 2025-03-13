@@ -28,3 +28,25 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint --max-warnings=0
+
+  test:
+    runs-on: ubuntu-latest # Use the latest Ubuntu environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Checkout the repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22" # You can use the Node version of your choice
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run Jest tests
+        run: |
+          npm run test -- --ci --coverage --maxWorkers=2  # Adjust based on your test script
+        env:
+          CI: true # Ensures Jest runs in CI mode (optimizes for CI)
